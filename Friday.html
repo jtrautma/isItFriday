@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <title>Is it friday?</title>
+    <script type="text/javascript">
+		var isInIFrame = (window.location != window.parent.location) ? true : false;
+		if (isInIFrame) {
+			top.location.href = document.location.href;
+		}
+		</script>
+  
+    <script type="text/javascript">
+			function yesOrNo() {
+				var d = new Date();
+				if (5 == d.getDay()) {
+					var YesOrNo = 'Yes -- it really Is Friday!';
+					var yt = '<iframe id="ytplayer" type="text/html" width="700" height="400" '+
+					'src="http://www.youtube.com/embed/VzNzylF33HM?autoplay=1&rel=0&loop=1&playlist=VzNzylF33HM" frameborder="0"></iframe>';
+					document.getElementById('ytcont').innerHTML = yt;
+				} 
+				else
+				if (1 == d.getDay()) {
+					var YesOrNo = 'Shit -- it is Monday';
+					var yt = '<img src="https://media4.giphy.com/media/3o85xJ79VJSedjJEYM/200w.gif" class="_3QcZOBs-_0PFoUjz21NMOt" width="300" height="300">';
+					document.getElementById('ytcont').innerHTML = yt;
+				}
+				else
+				if (3 == d.getDay()) {
+					var YesOrNo = 'It is Wednesday -- yummie!';
+					var yt = '<img src="https://media0.giphy.com/media/s3irNry2Apryw/200.gif" class="_3QcZOBs-_0PFoUjz21NMOt" width="500" height="300">';
+					document.getElementById('ytcont').innerHTML = yt;
+				}
+				else
+				if (4 == d.getDay()) {
+					var YesOrNo = 'Almost there -- it is Thursday!';
+					var yt = '<img src="https://media0.giphy.com/media/dEPGknRiEniec/200.gif" class="_3QcZOBs-_0PFoUjz21NMOt" width="500" height="300">';
+					document.getElementById('ytcont').innerHTML = yt;
+				} 
+				else
+				{
+					var YesOrNo = 'Nee, heute leider nicht.';
+					var yt = '<img src="https://media3.giphy.com/media/4wAO1N5uusbMQ/200.gif" class="_3QcZOBs-_0PFoUjz21NMOt" width="500" height="300">';
+					document.getElementById('ytcont').innerHTML = yt;
+				}
+				document.getElementById('yesOrNo').innerHTML = YesOrNo;
+			}
+		</script>
+</head>
+
+<body style="text-align:center;background:#000;color:#fff;padding-top:50px" onload="yesOrNo();">
+    <h1>Is it friday?</h1>
+    <p id="yesOrNo" style="font-family:Verdana;font-size:40px;">
+        Yes
+    </p>
+    <div id="ytcont"></div>
+    <div id="sense" style="margin-top:210px">
+
+    
+    </div>
+    
+</body>
+
+</html>
